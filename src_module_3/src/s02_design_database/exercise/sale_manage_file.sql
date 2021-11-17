@@ -1,5 +1,7 @@
+drop database if exists sale_manage;
 create database sale_manage;
 
+use  sale_manage;
 -- drop database sale_manage;
 
 
