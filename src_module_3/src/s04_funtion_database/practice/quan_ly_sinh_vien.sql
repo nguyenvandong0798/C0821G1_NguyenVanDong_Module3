@@ -1,5 +1,5 @@
 create database quan_ly_sinh_vien2;
-
+-- drop database quan_ly_sinh_vien2;
 use quan_ly_sinh_vien2;
 
 create table class(
@@ -14,8 +14,8 @@ create table student(
     address     VARCHAR(50),
     phone       VARCHAR(20),
     `status`      BIT,
-    class_id     INT         NOT NULL,
-    FOREIGN KEY (class_id) REFERENCES class (class_id)
+    student_class_id     INT         NOT NULL,
+    FOREIGN KEY (student_class_id) REFERENCES class (class_id)
 );
 
 create table subjects(

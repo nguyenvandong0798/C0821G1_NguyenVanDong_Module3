@@ -57,3 +57,16 @@ from customer c
 inner join orders o on c.id = o.customer_id
 inner join order_detail od on o.id = od.order_id
 inner join product p on p.id = od.product_id;
+
+select c.id, c.`name`
+from customer c
+left join orders o on c.id = o.customer_id
+where not exists (
+select * from orders where o.customer_id = c.id
+);
+
+select o.id, o.`date`, sum(od.quality * p.price) AS price
+from orders o
+inner join order_detail od on o.id = od.order_id
+inner join product p on p.id = od.product_id
+group by od.order_id
