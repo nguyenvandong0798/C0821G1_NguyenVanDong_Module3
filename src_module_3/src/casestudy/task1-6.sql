@@ -55,3 +55,19 @@ where hd.ngay_lam_hop_dong between "2018-01-01" and "2018-12-30";
 select distinct ho_ten from khach_hang;
 
 -- task 9
+select dv.ma_dich_vu, dv.ten_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, kt.gia_thue,
+ sum(kt.gia_thue) as "doanh thu"
+from hop_dong hd
+join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+join kieu_thue kt on dv.ma_kieu_thue = kt.ma_kieu_thue
+group by dv.ma_dich_vu
+having hd.ngay_lam_hop_dong between "2019-01-01" and "2019-12-30";
+
+-- taks 10
+select hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hdct.so_luong
+from hop_dong hd
+join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+
+-- task 11
