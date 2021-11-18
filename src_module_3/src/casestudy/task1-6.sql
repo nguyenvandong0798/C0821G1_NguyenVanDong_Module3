@@ -40,7 +40,18 @@ select dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.chi_phi_thue, ldv.ten_loa
 from dich_vu dv 
 join hop_dong hd on dv.ma_dich_vu = hd.ma_dich_vu
 join loai_dich_vu ldv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
-where hd.ngay_lam_hop_dong >= "2019-01-00" and hd.ngay_lam_hop_dong <= "2019-03-00"
+where hd.ngay_lam_hop_dong >= "2019-01-00" and hd.ngay_lam_hop_dong <= "2019-03-00";
 
+-- task 7
+select dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da, kt.gia_thue,
+ldv.ten_loai_dich_vu
+from hop_dong hd 
+join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+join kieu_thue kt on dv.ma_kieu_thue = kt.ma_kieu_thue
+Join loai_dich_vu ldv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
+where hd.ngay_lam_hop_dong between "2018-01-01" and "2018-12-30";
 
+-- task 8
+select distinct ho_ten from khach_hang;
 
+-- task 9
