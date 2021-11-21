@@ -4,9 +4,6 @@ use casetudy;
 select * from nhan_vien
 where char_length(ho_va_ten) <= 15 and (ho_va_ten like "t%" or ho_va_ten like "l%" or ho_va_ten like "h%");
 
-select * from nhan_vien
-where ho_va_ten like "l%" and char_length(ho_va_ten) <= 15;
-
 -- Task 3
 select * 
 from khach_hang
@@ -143,8 +140,38 @@ select ma_nhan_vien
 	from hop_dong 
 		where year(ngay_lam_hop_dong) between 2017 and 2019);
 SET foreign_key_checks = 0;
-select * from nhan_vien;
+select * from hop_dong_chi_tiet;
 
  -- task 17
- 
+update khach_hang kh
+ join loai_khach lk on kh.ma_loai_khach = lk.ma_loai_khach
+ join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+ join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hd.ma_hop_dong
+set ten_loai_khach = "Diamond"
+where ten_loai_khach = "Platinum" and year(ngay_lam_hop_dong) = 2019 and tong_tien > 10000000; 
+
+ -- task 18
+delete from khach_hang
+where ma_khach_hang not in 
+(
+select ma_khach_hang
+	from hop_dong 
+		where year(ngay_lam_hop_dong) > 2016 );
+set foreign_key_checks = 0;
+select * from khach_hang;
+
+-- task 19
+update dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+set gia = gia * 2
+where hdct.so_luong > 10 and year(hd.ngay_lam_hop_dong) = 2019;
+
+-- task 20 
+select kh.ma_khach_hang, nv.ma_nhan_vien, kh.ho_ten, nv.ho_va_ten, kh.email, nv.email,
+kh.so_dien_thoai,nv.so_dien_thoai, kh.ngay_sinh, nv.ngay_sinh, kh.dia_chi, nv.dia_chi
+from hop_dong hd
+join khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang
+join nhan_vien nv on nv.ma_nhan_vien = hd.ma_nhan_vien
+
  
