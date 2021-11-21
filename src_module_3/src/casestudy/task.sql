@@ -2,7 +2,7 @@ use casetudy;
 
 -- task 2
 select * from nhan_vien
-where ho_va_ten like "t%" and char_length(ho_va_ten) <= 15;
+where char_length(ho_va_ten) <= 15 and (ho_va_ten like "t%" or ho_va_ten like "l%" or ho_va_ten like "h%");
 
 select * from nhan_vien
 where ho_va_ten like "l%" and char_length(ho_va_ten) <= 15;
