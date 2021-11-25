@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        [class *= "col-"]{
+            float: left;
+            padding: 5px;
+        }
+        .row ::after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            font-size: 30px;
+            background-color: lightgray;
+        }
+        .cartoon-text{
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+        }
+
+        .menu{
+            background-color: lightgray;
+            text-align: center;
+            margin-top: 5px;
+        }
+        span{
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+        <div class="row">
+            <div class="col-12 header">
+                Phim<l class="cartoon-text"> Hoat hinh</l>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 menu">
+                phim hoạt hình | phim hoạt hình yêu thich | nhân vật hoạt hình | góp ý
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12">
+                        <video width="100%" height="100%" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span>wellcom đến với khách sạn Nobita</span>
+                        Channel Fun
+                    </div>
+                    <div class="col-12">
+                        <video width="100%" height="100%" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span>Sunel khủng lồ</span>
+                        Doremon Vietsub
+                    </div>
+                    <div class="col-12">
+                        <video width="100%" height="100%" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span>Còi điều khiển vật</span>
+                        Doremon Vietsub
+                    </div>
+                    <div class="col-12">
+                        <video width="100%" height="100%" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span>Chiếc máy tạo kẹo bông</span>
+                        Doremon Vietsub
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <video width="100%" height="100%" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        Bên cạnh những mẩu truyện ngắn, bạn còn được thưởng thức những chuyến phiêu lưu hấp dẫn, thú vị
+                        của nhóm bạn Nobita, Xuka, Chaien và Xeko cùng chú mèo máy thông minh Doremon thông qua những
+                        tập truyện dài Doraemon (truyện dài Doremon). Với các tình tiết hấp dẫn, vô cùng sáng tạo và lôi
+                        cuốn qua các chuyến phiêu lưu mạo hiểm cùng tình bạn bền chặt của các nhân vật trong chuyện sẽ
+                        giúp người đọc như đi vào một thế giới cổ tích, thần tiên, thế giới mà bất kỳ ai cũng mong được
+                        đặt chân đến một lần.
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

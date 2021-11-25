@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        [class *= "col-"] {
+            float: left;
+            padding: 2px;
+        }
+
+        .row ::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header li a:hover {
+            background-color: red;
+            padding: 10px;
+
+        }
+        .header{
+            background-color: black;
+            height: 100px;
+        }
+        .header li{
+            display: block;
+            float: left;
+            padding: 50px 50px;
+        }
+        .header li a{
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+        .menu-1{
+            height: 500px;
+            background-color: lightgray;
+        }
+        .left li{
+            list-style: none;
+            text-align: center;
+            padding: 5px;
+        }
+        .left li a{
+            text-decoration: none;
+        }
+        p,strong{
+            font-size: x-large;
+            font-weight: bold;
+        }
+        .content{
+            height: 500px;
+        }
+        .right li{
+            border: 2px;
+            border-color: red;
+            padding: 5px;
+        }
+         .button1{
+             position: relative;
+             top: 10%;
+             left: 40%;
+             bottom: 10%;
+            padding: 30px;
+        }
+        .button2{
+            position: relative;
+            top: 15%;
+            left: 40%;
+            padding: 30px;
+        }
+        .footer{
+            height: 50px;
+            background-color: silver;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-12 ">
+        <ul class="header">
+            <li><a href="#">logo</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <div class="row">
+            <div class="col-12 menu-1">
+                <ul class="left">
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12 content">
+                <p>Welcome</p>
+                Tôi đang ở Paris, và tôi không đánh giá quá cao giá trị của các kỷ lục này. Chúng tôi chơi mỗi trận
+                cách ba ngày, và không có thời gian để nghĩ về điều đó. Mọi người tập trung vào trận tiếp theo, cố gắng
+                đạt được mục tiêu và vượt qua thử thách đã đặt ra. Khi giải nghệ, tôi mới bắt đầu nhìn lại tất cả kỷ lục
+                mà tôi may mắn lập được. Khi đó tôi sẽ công nhận giá trị thực sự của chúng. Khi điểm lại những kỷ lục
+                này, tôi mới thấy những gì mình làm được thật phi thường
+                <hr>
+                <p>Test</p>
+                Mọi người tập trung vào trận tiếp theo...
+                </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="row">
+            <div class="col-12 menu-1">
+                <button class="button1">ADS</button><br>
+                <button class ="button2">ADS</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 footer">Footer Text
+    </div>
+</div>
+</body>
+</html>
