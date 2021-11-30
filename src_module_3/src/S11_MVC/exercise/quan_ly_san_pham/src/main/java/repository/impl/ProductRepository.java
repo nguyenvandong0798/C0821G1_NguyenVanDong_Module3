@@ -12,9 +12,9 @@ public class ProductRepository implements IProductRepository {
     private static Map<Integer, Product> productList =new HashMap<>();
     static {
         productList.put(1, new Product(1, "Milk", "1000", "thuc uong", "viet nam"));
-        productList.put(1, new Product(2, "Cake", "2000", "do an", "viet nam"));
-        productList.put(1, new Product(3, "candy", "1300", "do an", "viet nam"));
-        productList.put(1, new Product(4, "cream", "1600", "do an", "viet nam"));
+        productList.put(2, new Product(2, "Cake", "2000", "do an", "viet nam"));
+        productList.put(3, new Product(3, "candy", "1300", "do an", "viet nam"));
+        productList.put(4, new Product(4, "cream", "1600", "do an", "viet nam"));
     }
 
     @Override

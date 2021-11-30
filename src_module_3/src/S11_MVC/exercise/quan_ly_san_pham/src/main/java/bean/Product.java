@@ -7,6 +7,19 @@ public class Product {
     private String description;
     private String nation;
 
+
+
+    public Product() {
+    }
+
+    public Product(int id, String name, String price, String description, String nation) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.nation = nation;
+
+    }
     public int getId() {
         return id;
     }
@@ -45,17 +58,5 @@ public class Product {
 
     public void setNation(String nation) {
         this.nation = nation;
-    }
-
-    public Product() {
-    }
-
-    public Product(int id, String name, String price, String description, String nation) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.nation = nation;
-
     }
 }

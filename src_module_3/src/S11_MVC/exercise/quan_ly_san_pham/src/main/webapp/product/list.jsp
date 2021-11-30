@@ -14,6 +14,7 @@
 <body>
 <h2>List Products</h2>
 <c:out value="${masege}"></c:out>
+<a href="/products?action=create"><button>Create product</button></a>
 <table>
     <tr>
         <th> Id</th>
@@ -22,7 +23,7 @@
         <th> Description</th>
         <th> Nation</th>
     </tr>
-        <c:forEach var="product" items="${products}"></c:forEach>
+        <c:forEach var="product" items="${products}">
     <tr>
         <td><c:out value="${product.id}"></c:out></td>
         <td><c:out value="${product.name}"></c:out></td>
@@ -30,6 +31,7 @@
         <td><c:out value="${product.description}"></c:out></td>
         <td><c:out value="${product.nation}"></c:out></td>
     </tr>
+        </c:forEach>
 </table>
 </body>
 </html>
