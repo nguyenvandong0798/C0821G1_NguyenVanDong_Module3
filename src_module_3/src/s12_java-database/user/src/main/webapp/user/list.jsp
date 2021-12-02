@@ -12,9 +12,16 @@
         <a href="/users?action=create">Add New User</a>
     </h2>
 </center>
+
 <div align="center">
-    <input name="search">
-    <button><a href="/users?action=search&search=${user.country}">search</a></button>
+    <form action="/users?action=search" method="post">
+        <table>
+            <tr>
+                <td><input type="text" name="search" id="country" placeholder="Enter country "></td>
+                <td><button type="submit">Search</button></td>
+            </tr>
+        </table>
+    </form>
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
         <tr>

@@ -13,6 +13,14 @@
 </head>
 <body>
 <h2>List Products</h2>
+<form action="/products?action=search" method="post">
+    <table>
+        <tr>
+            <td><input type="text" name="search" id="search" placeholder="Enter Name "></td>
+            <td><button type="submit">Search</button></td>
+        </tr>
+    </table>
+</form>
 <c:out value="${masege}"></c:out>
 <a href="/products?action=create"><button>Create product</button></a>
 <table border="1">

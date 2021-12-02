@@ -34,11 +34,28 @@ public class UserServlet extends HttpServlet {
                 case "edit":
                     updateUser(request, response);
                     break;
+                case "search":
+                    searchUser(request, response);
+                    break;
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
     }
+    private void searchUser(HttpServletRequest request, HttpServletResponse response) {
+        String search = request.getParameter("search");
+        List<User> listUser = userDAO.searchUser(search);
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -61,9 +78,6 @@ public class UserServlet extends HttpServlet {
                 case "sort":
                    sortUser(request, response);
                     break;
-                case "search":
-                    searchUser(request, response);
-                    break;
                 default:
                     listUser(request, response);
                     break;
@@ -73,18 +87,6 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void searchUser(HttpServletRequest request, HttpServletResponse response) {
-        List<User> listUser = userDAO.searchUser();
-        request.setAttribute("listUser", listUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private void sortUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
