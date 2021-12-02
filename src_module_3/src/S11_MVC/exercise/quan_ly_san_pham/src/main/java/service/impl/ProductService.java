@@ -23,4 +23,25 @@ public class ProductService implements IProductService {
             return null;
         }
     }
+
+    @Override
+    public boolean save(Product products) {
+        this.iProductRepository.save(products);
+        return false;
+    }
+
+    @Override
+    public void update(int id, Product product) {
+
+    }
+
+    @Override
+    public Product findById(int id) {
+        return iProductRepository.findById(id);
+    }
+
+    @Override
+    public void remove(int id) {
+        iProductRepository.remove(id);
+    }
 }

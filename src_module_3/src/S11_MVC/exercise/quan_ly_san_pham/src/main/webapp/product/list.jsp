@@ -15,23 +15,25 @@
 <h2>List Products</h2>
 <c:out value="${masege}"></c:out>
 <a href="/products?action=create"><button>Create product</button></a>
-<table>
+<table border="1">
     <tr>
-        <th> Id</th>
-        <th> Name</th>
-        <th> Price</th>
-        <th> Description</th>
-        <th> Nation</th>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Description</td>
+        <td>Nation</td>
+        <td>Edit</td>
+        <td>Delete</td>
     </tr>
-        <c:forEach var="product" items="${products}">
-    <tr>
-        <td><c:out value="${product.id}"></c:out></td>
-        <td><c:out value="${product.name}"></c:out></td>
-        <td><c:out value="${product.price}"></c:out></td>
-        <td><c:out value="${product.description}"></c:out></td>
-        <td><c:out value="${product.nation}"></c:out></td>
-    </tr>
-        </c:forEach>
+    <c:forEach items="${products}" var="product">
+        <tr>
+            <td><a href="/products?action=view&id=${customer.getId()}">${product.getName()}</a></td>
+            <td>${product.getPrice()}</td>
+            <td>${product.getDescription()}</td>
+            <td>${product.getNation()}</td>
+            <td><a href="/products?action=edit&id=${product.getId()}">edit</a></td>
+            <td><a href="/products?action=delete&id=${product.getId()}">delete</a></td>
+        </tr>
+    </c:forEach>
 </table>
 </body>
 </html>
