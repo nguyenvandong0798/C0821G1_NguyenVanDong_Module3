@@ -1,0 +1,36 @@
+package service.impl;
+
+import bean.Student;
+import repository.IStudentRepository;
+import repository.impl.StudentRepository;
+import service.IStudentService;
+
+import java.util.List;
+
+public class StudentService implements IStudentService {
+    private static IStudentRepository iStudentRepository = new StudentRepository();
+    @Override
+    public List<Student> getList() {
+        try {
+            List<Student>students = iStudentRepository.getAll();
+            if (students.size()==0){
+                return null;
+            }
+            return students;
+        }catch (Exception e){
+            System.out.println("error");
+            return null;
+        }
+    }
+
+    @Override
+    public void delete(int id) {
+        this.iStudentRepository.deleteStudent(id);
+
+    }
+
+    @Override
+    public void create(Student student) {
+        this.iStudentRepository.createStudent(student);
+    }
+}

@@ -1,0 +1,40 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Admin
+  Date: 2/12/2021
+  Time: 9:29 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+<head>
+    <title>List Student</title>
+</head>
+<body>
+<h2> List Student</h2>
+<a href="/students"><button>Create Student</button></a>
+<c:out value="${string}"></c:out>
+<table border = "1px">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>score</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <c:forEach var="student" items="${students}">
+        <tr>
+            <td><c:out value="${student.id}"/></td>
+            <td><c:out value="${student.name}"/></td>
+            <td><c:out value="${student.gender}"/></td>
+            <td><c:out value="${student.score}"/></td>
+            <td></td>
+            <td><a href="/student?action=delete&id=${student.id}"onclick="return confirm('Do you want to delete ${student.name} ?')">Delete</a></td>
+
+        </tr>
+    </c:forEach>
+</table>
+</body>
+</html>
