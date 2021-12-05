@@ -2,9 +2,13 @@ package service.impl;
 
 import bean.Student;
 import repository.IStudentRepository;
+import repository.impl.BaseRepository;
 import repository.impl.StudentRepository;
 import service.IStudentService;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class StudentService implements IStudentService {
@@ -32,5 +36,20 @@ public class StudentService implements IStudentService {
     @Override
     public void create(Student student) {
         this.iStudentRepository.createStudent(student);
+    }
+
+    @Override
+    public List<Student> search(String name) {
+        return this.iStudentRepository.searchStudent(name);
+    }
+
+    @Override
+    public List<Student> sort(String score) {
+        return iStudentRepository.sortStudent(score);
+    }
+
+    @Override
+    public boolean edit(Student student) {
+       return this.iStudentRepository.editStudent(student);
     }
 }

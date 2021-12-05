@@ -10,12 +10,39 @@
 <html>
 <head>
     <title>List Student</title>
+    <style>
+        .f1{
+            width: 5%;
+            float: left;
+        }
+        .f2{
+            width: 15%;
+            float: left;
+        }
+        .f3{
+            clear: both;
+        }
+    </style>
 </head>
 <body>
-<h2> List Student</h2>
-<a href="/students"><button>Create Student</button></a>
+<div >
+<h2>List Student</h2>
+
+
+<form action="/students?action=search" method="post" >
+    <input type="text" name="search">
+    <button type="submit">search</button>
+</form>
+
+<form class="f1" action="/students?action=sort" method="post" >
+    <input type="hidden" name="sort">
+    <button type="submit" >sort</button>
+</form>
+
+<a class="f2" href="/students?action=create"><button>Create Student</button></a>
+
 <c:out value="${string}"></c:out>
-<table border = "1px">
+<table border = "1px" class="f3">
     <tr>
         <td>Id</td>
         <td>Name</td>
@@ -30,11 +57,14 @@
             <td><c:out value="${student.name}"/></td>
             <td><c:out value="${student.gender}"/></td>
             <td><c:out value="${student.score}"/></td>
-            <td></td>
-            <td><a href="/student?action=delete&id=${student.id}"onclick="return confirm('Do you want to delete ${student.name} ?')">Delete</a></td>
+            <td><a href="/students?action=edit&id=${student.id}"
+                   onclick="return confirm('Do you want to edit ${student.name} ?')">edit</a></td>
+            <td><a href="/students?action=delete&id=${student.id}"
+                   onclick="return confirm('Do you want to delete ${student.name} ?')">Delete</a></td>
 
         </tr>
     </c:forEach>
 </table>
+</div>
 </body>
 </html>
