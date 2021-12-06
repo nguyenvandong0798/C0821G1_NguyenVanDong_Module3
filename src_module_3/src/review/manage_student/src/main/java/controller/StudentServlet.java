@@ -127,7 +127,7 @@ public class StudentServlet extends HttpServlet {
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("student/edit.jsp");
         dispatcher.forward(request, response);
-        request.setAttribute("student",);
+//        request.setAttribute("student",);
     }
 
     private void create(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
