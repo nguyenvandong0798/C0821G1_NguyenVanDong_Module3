@@ -1,30 +1,30 @@
 package bean;
 
 public class CustomerType {
-    private int ma_loai_khach;
-    private String ten_loai_khach;
+    private int maLoaiKhach;
+    private String tenLoaiKhach;
 
     public CustomerType() {
     }
 
     public CustomerType(int ma_loai_khach, String ten_loai_khach) {
-        this.ma_loai_khach = ma_loai_khach;
-        this.ten_loai_khach = ten_loai_khach;
+        this.maLoaiKhach = ma_loai_khach;
+        this.tenLoaiKhach = ten_loai_khach;
     }
 
-    public int getMa_loai_khach() {
-        return ma_loai_khach;
+    public int getMaLoaiKhach() {
+        return maLoaiKhach;
     }
 
-    public void setMa_loai_khach(int ma_loai_khach) {
-        this.ma_loai_khach = ma_loai_khach;
+    public void setMaLoaiKhach(int maLoaiKhach) {
+        this.maLoaiKhach = maLoaiKhach;
     }
 
-    public String getTen_loai_khach() {
-        return ten_loai_khach;
+    public String getTenLoaiKhach() {
+        return tenLoaiKhach;
     }
 
-    public void setTen_loai_khach(String ten_loai_khach) {
-        this.ten_loai_khach = ten_loai_khach;
+    public void setTenLoaiKhach(String tenLoaiKhach) {
+        this.tenLoaiKhach = tenLoaiKhach;
     }
 }

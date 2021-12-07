@@ -1,88 +1,86 @@
 package bean;
 
-import java.util.Date;
-
 public class Customer {
-    private int a_khach_hang;
-    private CustomerType ma_loai_khach;
-    private String ho_ten;
-    private String ngay_sinh;
-    private String gioi_tinh;
-    private String so_cmnd;
-    private String so_dien_thoai;
+    private int maKhachHang;
+    private CustomerType maLoaiKhach;
+    private String hoTen;
+    private String ngaySinh;
+    private String gioiTinh;
+    private String soCmnd;
+    private String soDienThoai;
     private String email;
-    private String dia_chi;
+    private String diaChi;
 
-    public Customer(int a_khach_hang, CustomerType ma_loai_khach, String ho_ten, String ngay_sinh,
+    public Customer(int ma_khach_hang, CustomerType ma_loai_khach, String ho_ten, String ngay_sinh,
                     String gioi_tinh, String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
-        this.a_khach_hang = a_khach_hang;
-        this.ma_loai_khach = ma_loai_khach;
-        this.ho_ten = ho_ten;
-        this.ngay_sinh = ngay_sinh;
-        this.gioi_tinh = gioi_tinh;
-        this.so_cmnd = so_cmnd;
-        this.so_dien_thoai = so_dien_thoai;
+        this.maKhachHang = ma_khach_hang;
+        this.maLoaiKhach = ma_loai_khach;
+        this.hoTen = ho_ten;
+        this.ngaySinh = ngay_sinh;
+        this.gioiTinh = gioi_tinh;
+        this.soCmnd = so_cmnd;
+        this.soDienThoai = so_dien_thoai;
         this.email = email;
-        this.dia_chi = dia_chi;
+        this.diaChi = dia_chi;
     }
 
     public Customer() {
     }
 
-    public int getA_khach_hang() {
-        return a_khach_hang;
+    public int getMaKhachHang() {
+        return maKhachHang;
     }
 
-    public void setA_khach_hang(int a_khach_hang) {
-        this.a_khach_hang = a_khach_hang;
+    public void setMaKhachHang(int maKhachHang) {
+        this.maKhachHang = maKhachHang;
     }
 
-    public CustomerType getMa_loai_khach() {
-        return ma_loai_khach;
+    public CustomerType getMaLoaiKhach() {
+        return maLoaiKhach;
     }
 
-    public void setMa_loai_khach(CustomerType ma_loai_khach) {
-        this.ma_loai_khach = ma_loai_khach;
+    public void setMaLoaiKhach(CustomerType maLoaiKhach) {
+        this.maLoaiKhach = maLoaiKhach;
     }
 
-    public String getHo_ten() {
-        return ho_ten;
+    public String getHoTen() {
+        return hoTen;
     }
 
-    public void setHo_ten(String ho_ten) {
-        this.ho_ten = ho_ten;
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
     }
 
-    public String getNgay_sinh() {
-        return ngay_sinh;
+    public String getNgaySinh() {
+        return ngaySinh;
     }
 
-    public void setNgay_sinh(String ngay_sinh) {
-        this.ngay_sinh = ngay_sinh;
+    public void setNgaySinh(String ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
-    public String getGioi_tinh() {
-        return gioi_tinh;
+    public String getGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setGioi_tinh(String gioi_tinh) {
-        this.gioi_tinh = gioi_tinh;
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
-    public String getSo_cmnd() {
-        return so_cmnd;
+    public String getSoCmnd() {
+        return soCmnd;
     }
 
-    public void setSo_cmnd(String so_cmnd) {
-        this.so_cmnd = so_cmnd;
+    public void setSoCmnd(String soCmnd) {
+        this.soCmnd = soCmnd;
     }
 
-    public String getSo_dien_thoai() {
-        return so_dien_thoai;
+    public String getSoDienThoai() {
+        return soDienThoai;
     }
 
-    public void setSo_dien_thoai(String so_dien_thoai) {
-        this.so_dien_thoai = so_dien_thoai;
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
     }
 
     public String getEmail() {
@@ -93,11 +91,11 @@ public class Customer {
         this.email = email;
     }
 
-    public String getDia_chi() {
-        return dia_chi;
+    public String getDiaChi() {
+        return diaChi;
     }
 
-    public void setDia_chi(String dia_chi) {
-        this.dia_chi = dia_chi;
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 }

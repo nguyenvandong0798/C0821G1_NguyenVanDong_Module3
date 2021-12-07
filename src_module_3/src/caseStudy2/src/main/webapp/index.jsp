@@ -58,15 +58,12 @@
             <a class="nav-link" href="#">Employee</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="/web">
+              Home
+            </a>
+            <a class="nav-link dropdown-toggle" href="/customer">
               Customer
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled">Service</a>
@@ -84,15 +81,8 @@
 
   </nav> <div class="row">
     <div class="col-3">
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-          The current link item
-        </a>
-        <a href="/customer" class="list-group-item list-group-item-action">Customer</a>
-        <a href="#" class="list-group-item list-group-item-action">Employee</a>
-        <a href="/service" class="list-group-item list-group-item-action">Service</a>
-        <a class="list-group-item list-group-item-action disabled">Contract</a>
-      </div>
+    <%--
+    --%>
     </div>
     <div class="row">
     </div>
