@@ -5,14 +5,14 @@ public class Customer {
     private CustomerType maLoaiKhach;
     private String hoTen;
     private String ngaySinh;
-    private String gioiTinh;
+    private int gioiTinh;
     private String soCmnd;
     private String soDienThoai;
     private String email;
     private String diaChi;
 
     public Customer(int ma_khach_hang, CustomerType ma_loai_khach, String ho_ten, String ngay_sinh,
-                    String gioi_tinh, String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
+                    int gioi_tinh, String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
         this.maKhachHang = ma_khach_hang;
         this.maLoaiKhach = ma_loai_khach;
         this.hoTen = ho_ten;
@@ -26,6 +26,7 @@ public class Customer {
 
     public Customer() {
     }
+
 
     public int getMaKhachHang() {
         return maKhachHang;
@@ -59,11 +60,11 @@ public class Customer {
         this.ngaySinh = ngaySinh;
     }
 
-    public String getGioiTinh() {
+    public int getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioiTinh(String gioiTinh) {
+    public void setGioiTinh(int gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 

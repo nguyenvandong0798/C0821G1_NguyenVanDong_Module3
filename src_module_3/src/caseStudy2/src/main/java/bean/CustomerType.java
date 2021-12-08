@@ -7,6 +7,10 @@ public class CustomerType {
     public CustomerType() {
     }
 
+    public CustomerType(int maLoaiKhach) {
+        this.maLoaiKhach = maLoaiKhach;
+    }
+
     public CustomerType(int ma_loai_khach, String ten_loai_khach) {
         this.maLoaiKhach = ma_loai_khach;
         this.tenLoaiKhach = ten_loai_khach;

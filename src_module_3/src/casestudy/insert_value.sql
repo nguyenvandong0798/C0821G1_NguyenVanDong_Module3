@@ -1,7 +1,3 @@
-use casetudy;
-
-select * from vi_tri;
-delete from bo_phan;
 
 insert into vi_tri
 values (1,"Lễ tân");
@@ -108,7 +104,6 @@ insert into nhan_vien
 values (5,"tran công hậu","1993-08-21", "206123234",1234568, "098654311", "conghau@gmail.com", "đà nẵng", 5, 5, 5);
 insert into nhan_vien
 values (6,"lê văn đoàn","1994-06-02", "20612380",1234568, "098654321", "vandoan@gmail.com", "vinh", 6, 6, 6);
-select * from nhan_vien;
 
 insert into khach_hang
 values (1, 1, "nguyễn văn đoàn","1990-12-12", 1,  "206123456", "098654321", "vandoan@gmail.com", "quảng nam");
@@ -117,11 +112,11 @@ values (2, 4, "lê van như","1990-02-11", 1,  "206123456", "098654321", "vannhu
 insert into khach_hang
 values (3, 2, "nguyễn anh tâm","1990-02-12", 1,  "206123456", "098654321", "anhtam@gmail.com", "quảng trị");
 insert into khach_hang
-values (4, 3, "nguyễn văn phương","1990-10-10", 1,  "206123456", "098654321", "vanphuong@gmail.com", "quảng nam");
+values (8, 3, "nguyen van phuong","1990-10-10", 1,  "206123456", "098654321", "vanphuong@gmail.com", "quảng nam");
 insert into khach_hang
 values (5, 5, "trần thị ly","1990-09-12", 0,  "206123456", "098654321", "thily@gmail.com", "vinh");
 insert into khach_hang
-values (6, 6, "trần anh sự","1990-10-12", 1,  "206123456", "098654321", "anhsu@gmail.com", "quảng nam");
+values (7, 6, "tran anh da","1990-10-12", 1,  "206123456", "098654321", "anhsu@gmail.com", "quảng nam");
 select * from khach_hang;
 
 insert into dich_vu
@@ -152,11 +147,6 @@ insert into hop_dong
 values (6, "2020-11-08", "2021-11-08", 20000000, 11000000,6,4,6);
 select * from hop_dong;
 
--- use casetudy;
--- update hop_dong 
--- set ngay_lam_hop_dong = "2019-01-11"
--- where ma_hop_dong = 3;
-
 insert into hop_dong_chi_tiet
 values(1,1,1,3);
 insert into hop_dong_chi_tiet
@@ -169,4 +159,6 @@ insert into hop_dong_chi_tiet
 values(5,3,2,5);
 insert into hop_dong_chi_tiet
 values(6,6,3,3);
-select * from hop_dong_chi_tiet;
+
+select * from khach_hang 
+

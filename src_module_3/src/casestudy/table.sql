@@ -1,3 +1,5 @@
+drop database if exists casetudy;
+create database casetudy;
 use casetudy;
 
 create table vi_tri(

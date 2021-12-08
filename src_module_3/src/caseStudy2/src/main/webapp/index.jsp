@@ -58,9 +58,6 @@
             <a class="nav-link" href="#">Employee</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/web">
-              Home
-            </a>
             <a class="nav-link dropdown-toggle" href="/customer">
               Customer
             </a>
