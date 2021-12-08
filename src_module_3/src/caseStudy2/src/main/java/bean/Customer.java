@@ -2,7 +2,7 @@ package bean;
 
 public class Customer {
     private int maKhachHang;
-    private CustomerType maLoaiKhach;
+    private int maLoaiKhach;
     private String hoTen;
     private String ngaySinh;
     private int gioiTinh;
@@ -11,7 +11,7 @@ public class Customer {
     private String email;
     private String diaChi;
 
-    public Customer(int ma_khach_hang, CustomerType ma_loai_khach, String ho_ten, String ngay_sinh,
+    public Customer(int ma_khach_hang, int ma_loai_khach, String ho_ten, String ngay_sinh,
                     int gioi_tinh, String so_cmnd, String so_dien_thoai, String email, String dia_chi) {
         this.maKhachHang = ma_khach_hang;
         this.maLoaiKhach = ma_loai_khach;
@@ -36,11 +36,11 @@ public class Customer {
         this.maKhachHang = maKhachHang;
     }
 
-    public CustomerType getMaLoaiKhach() {
+    public int getMaLoaiKhach() {
         return maLoaiKhach;
     }
 
-    public void setMaLoaiKhach(CustomerType maLoaiKhach) {
+    public void setMaLoaiKhach(int maLoaiKhach) {
         this.maLoaiKhach = maLoaiKhach;
     }
 

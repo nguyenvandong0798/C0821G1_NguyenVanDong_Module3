@@ -25,8 +25,54 @@ public class CustomerServlet extends HttpServlet {
                 break;
             case "search":
                 search(request, response);
+                break;
+            case "sort":
+                sort(request, response);
+                break;
+            case "edit":
+                edit(request, response);
+                break;
             default:
 
+        }
+    }
+
+    private void sort(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("sort");
+        List<Customer> customers = this.iCustomerRepository.sortCustomer(name);
+        request.setAttribute("customers", customers);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("casestudy/customer/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void edit(HttpServletRequest request, HttpServletResponse response) {
+        int maKhachHang = Integer.parseInt(request.getParameter("maKhachHang"));
+        int maLoaiKhach = Integer.parseInt(request.getParameter("maLoaiKhach"));
+        String hoTen = request.getParameter("hoten");
+        String ngaySinh = request.getParameter("ngaysinh");
+        int gioiTinh = Integer.parseInt(request.getParameter("gioitinh"));
+        String cmnd = request.getParameter("cmnd");
+        String soDienThoai = request.getParameter("sdt");
+        String email = request.getParameter("email");
+        String diaChi = request.getParameter("diachi");
+
+
+        Customer customer = new Customer(maKhachHang, maLoaiKhach, hoTen, ngaySinh, gioiTinh, cmnd, soDienThoai, email, diaChi);
+        this.iCustomerRepository.editCustomer(customer);
+        request.setAttribute("customer",customer);
+        try {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("casestudy/customer/edit.jsp");
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -55,9 +101,8 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String diaChi = request.getParameter("diachi");
 
-        CustomerType customers = new CustomerType(maLoaiKhachHang);
 
-        Customer customer = new Customer(maKhachHang, customers, hoTen, ngaySinh, giotinh, cmnd, soDienThoai, email, diaChi);
+        Customer customer = new Customer(maKhachHang, maLoaiKhachHang, hoTen, ngaySinh, giotinh, cmnd, soDienThoai, email, diaChi);
         this.iCustomerRepository.createCustomer(customer);
 
         try {
@@ -85,9 +130,20 @@ public class CustomerServlet extends HttpServlet {
             case "search":
                 searchCustomer(request, response);
                 break;
+            case "edit":
+                editCustomer(request, response);
+                break;
             default:
                 getList(request, response);
         }
+    }
+
+    private void editCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("maKhachHang"));
+        Customer customer = this.iCustomerRepository.byMKH(id);
+        request.setAttribute("customer", customer);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/casestudy/customer/edit.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void searchCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

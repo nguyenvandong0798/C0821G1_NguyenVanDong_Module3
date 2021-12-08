@@ -12,6 +12,11 @@
     <button type="submit">search</button>
 </form>
 
+<form action="/customer?action=sort" method="post" >
+    <input type="hidden" name="sort">
+    <button type="submit">sort</button>
+</form>
+
 <a href="/customer?action=create"><button>Create Customer</button></a>
 
 <table border = "1px" class="f3">
@@ -30,7 +35,7 @@
         <tr>
 
             <td><c:out value="${customers.maKhachHang}"/></td>
-            <td><c:out value="${customers.getMaLoaiKhach().maLoaiKhach}"/></td>
+            <td><c:out value="${customers.maLoaiKhach}"/></td>
             <td><c:out value="${customers.hoTen}"/></td>
             <td><c:out value="${customers.ngaySinh}"/></td>
             <td><c:out value="${customers.gioiTinh}"/></td>

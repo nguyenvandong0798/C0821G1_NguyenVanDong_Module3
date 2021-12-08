@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CustomerService implements ICustomerService {
-    private  static ICustomerRepository iCustomerRepository = new CustomerRepository();
+    private  static final ICustomerRepository iCustomerRepository = new CustomerRepository();
     @Override
     public List<Customer> getList() {
         try{
@@ -38,5 +38,20 @@ public class CustomerService implements ICustomerService {
     @Override
     public List<Customer> search(String hoTen) {
         return this.iCustomerRepository.searchCustomer(hoTen);
+    }
+
+    @Override
+    public boolean edit(Customer customer) {
+        return this. iCustomerRepository.editCustomer(customer);
+    }
+
+    @Override
+    public Customer byMaKhachHang(int maKhachHang) {
+        return this.iCustomerRepository.byMKH(maKhachHang);
+    }
+
+    @Override
+    public List<Customer> sort(String hoTen) {
+        return null;
     }
 }
