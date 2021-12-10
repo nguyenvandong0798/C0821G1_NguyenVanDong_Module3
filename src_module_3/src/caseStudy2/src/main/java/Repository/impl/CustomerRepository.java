@@ -78,15 +78,16 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public List<Customer> searchCustomer(String hoTen) {
+    public List<Customer> searchCustomer(String hoTen, int maKhachHang) {
         List<Customer> customers = new ArrayList<>();
         try {
 
-            PreparedStatement preparedStatement = BaseRepository.connection.prepareStatement("select * from khach_hang where ho_ten LIKE 'l%' = ?");
+            PreparedStatement preparedStatement = BaseRepository.connection.prepareStatement("select * from khach_hang where ho_ten = ? and ma_khach_hang = ?");
             preparedStatement.setString(1,hoTen);
+            preparedStatement.setInt(2,maKhachHang);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                int maKhachHang = Integer.parseInt(resultSet.getString("ma_khach_hang"));
+                int maKhachHangg = Integer.parseInt(resultSet.getString("ma_khach_hang"));
                 int maLoaiKhach = Integer.parseInt(resultSet.getString("ma_loai_khach"));
                 String hoTenn = resultSet.getString("ho_ten");
                 String ngaySinh = resultSet.getString("ngay_sinh");
@@ -96,7 +97,7 @@ public class CustomerRepository implements ICustomerRepository {
                 String email = resultSet.getString("email");
                 String diaChi = resultSet.getString("dia_chi");
 
-                customers.add(new Customer(maKhachHang,maLoaiKhach, hoTenn, ngaySinh, gioTinh,soCmnd, soDienThoai, email, diaChi));
+                customers.add(new Customer(maKhachHangg,maLoaiKhach, hoTenn, ngaySinh, gioTinh,soCmnd, soDienThoai, email, diaChi));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

@@ -11,7 +11,7 @@ public interface ICustomerRepository {
 
     void createCustomer(Customer customer);
 
-    List<Customer> searchCustomer(String hoTen);
+    List<Customer> searchCustomer(String hoTen, int maKhachHang);
 
     boolean editCustomer(Customer customer);
 

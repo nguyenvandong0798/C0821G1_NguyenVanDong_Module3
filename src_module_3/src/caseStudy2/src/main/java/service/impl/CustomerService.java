@@ -36,8 +36,8 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public List<Customer> search(String hoTen) {
-        return this.iCustomerRepository.searchCustomer(hoTen);
+    public List<Customer> search(String hoTen, int maKhachHang) {
+        return this.iCustomerRepository.searchCustomer(hoTen, maKhachHang);
     }
 
     @Override

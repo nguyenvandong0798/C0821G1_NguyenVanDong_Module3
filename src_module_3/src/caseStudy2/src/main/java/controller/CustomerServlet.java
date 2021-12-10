@@ -77,8 +77,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void search(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("search");
-        List<Customer> customers = this.iCustomerRepository.searchCustomer(name);
+        String name = request.getParameter("searchname");
+        int id = Integer.parseInt(request.getParameter("searchid"));
+        List<Customer> customers = this.iCustomerRepository.searchCustomer(name, id);
         request.setAttribute("customers", customers);
         RequestDispatcher dispatcher = request.getRequestDispatcher("casestudy/customer/list.jsp");
         try {

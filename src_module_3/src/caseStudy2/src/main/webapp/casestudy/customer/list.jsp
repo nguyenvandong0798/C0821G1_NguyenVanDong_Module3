@@ -8,7 +8,8 @@
 <h2>List Customer</h2>
 
 <form action="/customer?action=search" method="post" >
-    <input type="text" name="search">
+    <input type="text" name="searchname">
+    <input type="text" name="searchid">
     <button type="submit">search</button>
 </form>
 
