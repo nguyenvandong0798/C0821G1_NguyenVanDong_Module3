@@ -162,7 +162,8 @@ insert into hop_dong_chi_tiet
 values(6,6,3,3);
 
 SET FOREIGN_KEY_CHECKS=0;
+
 SELECT * FROM nhan_vien;
 insert into nhan_vien
-values (8,"le van van","1994-06-02", "20612380",1234568, "098654321", "vandoan@gmail.com", "vinh", 8, 8, 8);
+values (9,"le van van","1994-06-02", "20612380",1234568, "098654321", "vandoan@gmail.com", "vinh", 9, 9, 9);
 

@@ -8,8 +8,7 @@
 <h2>List Employee</h2>
 
 <form action="/employee?action=search" method="post" >
-    <input type="text" name="searchname">
-    <input type="text" name="searchid">
+    <input type="text" name="name">
     <button type="submit">search</button>
 </form>
 
@@ -50,7 +49,7 @@
             <td><c:out value="${employees.codeDepartment}"/></td>
             <td><a href="/employee?action=edit&id=${employees.id}"
                    onclick="return confirm('Do you want to edit ${employees.name} ?')">edit</a></td>
-            <td><a href="/employee?action=delete&id=${employees.id}"
+            <td><a href="/employee?action=delete&id=${employees.getId()}"
                    onclick="return confirm('Do you want to delete ${employees.name} ?')">Delete</a></td>
 
         </tr>
